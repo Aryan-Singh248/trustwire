@@ -105,7 +105,7 @@ npm run dev
 
 
 
-🌐 API Endpoints
+## 🌐 API Endpoints
 Method	Endpoint	Description
 GET	/api/test	Fetch full blockchain
 POST	/api/add	Perform a transaction
