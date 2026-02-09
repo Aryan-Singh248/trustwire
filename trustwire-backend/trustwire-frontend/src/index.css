@@ -1,0 +1,22 @@
+/* Reset browser defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full viewport control */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #000; /* fallback */
+  overflow-x: hidden;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* Root container must fill screen */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
