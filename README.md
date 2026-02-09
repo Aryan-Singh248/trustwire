@@ -146,27 +146,27 @@ Advanced blockchain explorer (search, filters)
 
 Transaction analytics and reports
 
-## 📸 Project Screenshots
+📸 Project Screenshots
 
-### Full Dashboard Overview
+ Full Dashboard Overview
 ![Dashboard](screenshots/Main%20TrustWire%20Dashboard.png)
 
-### Wallets (Before Transaction)
+ Wallets (Before Transaction)
 ![Wallet Before](screenshots/wallet-before-transaction.png)
 
-### Wallets (After Transaction)
+ Wallets (After Transaction)
 ![Wallet After](screenshots/wallet-after-transaction.png)
 
-### Transaction Demonstration
+ Transaction Demonstration
 ![Transaction Demo](screenshots/Transaction%20Demonstration.png)
 
-### Transaction Success Notification
+ Transaction Success Notification
 ![Transaction Success](screenshots/transaction-success-toast.png)
 
-### Blockchain Explorer
+ Blockchain Explorer
 ![Blockchain Explorer](screenshots/Blockchain%20Explorer%20–%20Full%20View.png)
 
-### Backend API – Blockchain Data
+ Backend API – Blockchain Data
 ![API Test](screenshots/backend-api-test.png)
 
 ### Backend Server Running
