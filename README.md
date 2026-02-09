@@ -174,3 +174,12 @@ Runs on http://localhost:5173
 
 ### Backend Server Running
 ![Server Running](screenshots/backend-server-running.png)
+
+## 🧩 System Design Diagrams
+
+### System Architecture Diagram
+![System Architecture](screenshots/system-architecture.png)
+
+### Transaction Sequence Diagram
+![Transaction Sequence](screenshots/transaction-sequence.png)
+
