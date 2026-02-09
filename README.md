@@ -98,14 +98,12 @@ npm install
 npm run dev
 
 Frontend
+
 cd trustwire-frontend
 npm install
 npm run dev
 
 
-cd trustwire-frontend
-npm install
-npm run dev
 
 🌐 API Endpoints
 Method	Endpoint	Description
