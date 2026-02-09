@@ -1,4 +1,4 @@
-# TrustWire
+# TrustWire  
 ## Blockchain-Based Digital Banking System
 
 TrustWire is a full-stack blockchain-based digital banking system that enables
@@ -13,158 +13,164 @@ a modern web-based dashboard.
 
 ## 🚀 Features
 
-- Digital wallets with balance management
-- Secure fund transfers with balance validation
-- Custom blockchain implementation
-- Immutable transaction ledger
-- Persistent blockchain storage using MongoDB
-- Real-time blockchain explorer
-- Modern, fintech-style user interface
+- Digital wallets with balance management  
+- Secure fund transfers with balance validation  
+- Custom blockchain implementation  
+- Immutable transaction ledger  
+- Persistent blockchain storage using MongoDB  
+- Real-time blockchain explorer  
+- Modern, fintech-style user interface  
 
 ---
 
 ## 🛠 Tech Stack
 
 ### Backend
-- Node.js
-- Express.js
-- MongoDB (Mongoose)
-- Custom Blockchain Engine
-- SHA-based hashing
+- Node.js  
+- Express.js  
+- MongoDB (Mongoose)  
+- Custom Blockchain Engine  
+- SHA-based hashing  
 
 ### Frontend
-- React (Vite)
-- Axios
-- Modern CSS (dark UI with gradients)
+- React (Vite)  
+- Axios  
+- Modern CSS (dark UI with gradients)  
 
 ---
 
 ## 🧱 System Architecture
 
-The system follows a three-layer architecture:
+Frontend (React UI)  
+↓  
+Backend (Node.js + Express)  
+↓  
+Database (MongoDB)  
 
-Frontend (React UI)
-↓
-Backend (Node.js + Express)
-↓
-Database (MongoDB)
-
-
-- The frontend communicates with the backend via REST APIs.
-- The backend handles transaction validation and blockchain logic.
-- MongoDB stores wallet data and persistent blockchain records.
+- REST-based communication between frontend and backend  
+- Backend enforces transaction validation and blockchain logic  
+- MongoDB persists wallets and blockchain blocks  
 
 ---
 
 ## 🔄 Transaction Flow
 
-1. User initiates a transaction from the frontend
-2. Backend validates sender, receiver, and balance
-3. Wallet balances are updated
-4. A new block is created and linked to the blockchain
-5. Blockchain is persisted to the database
-6. UI updates in real time
-7. Blockchain Explorer reflects the new block
+1. User initiates a transaction from the frontend  
+2. Backend validates sender, receiver, and balance  
+3. Wallet balances are updated  
+4. A new block is created and linked to the blockchain  
+5. Blockchain is persisted to the database  
+6. UI updates in real time  
+7. Blockchain Explorer reflects the new block  
 
 ---
 
 ## 📁 Project Structure
 
+```text
 TrustWire/
 ├── README.md
 ├── screenshots/
 ├── trustwire-backend/
-│ ├── src/
-│ │ ├── blockchain/
-│ │ ├── models/
-│ │ ├── routes/
-│ │ └── server.js
-│ └── package.json
+│   ├── src/
+│   │   ├── blockchain/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   └── server.js
+│   └── package.json
 └── trustwire-frontend/
-├── src/
-├── public/
-└── package.json
-
+    ├── src/
+    ├── public/
+    └── package.json
+```
 
 ---
 
 ## ▶️ How to Run the Project (Out of the Box)
 
-### 1️⃣ Start Backend
+### Backend
 
 ```bash
 cd trustwire-backend
 npm install
 npm run dev
-Backend runs at:
+```
 
-http://localhost:5001
-2️⃣ Start Frontend
+Runs on http://localhost:5001
+
+### Frontend
+
+```bash
 cd trustwire-frontend
 npm install
 npm run dev
-Frontend runs at:
+```
 
-http://localhost:5173
-🌐 API Endpoints
-Method	Endpoint	Description
-GET	/api/test	Fetch full blockchain
-POST	/api/add	Perform a transaction
-GET	/users	Fetch wallet balances
-POST	/users/create	Create a new wallet
-🔐 Security & Data Integrity
-Each transaction is validated before block creation
+Runs on http://localhost:5173
 
-Blockchain uses hash chaining to prevent tampering
+---
 
-Blockchain integrity is verified dynamically
+## 🌐 API Endpoints
 
-Invalid or insufficient transactions are rejected
+| Method | Endpoint      | Description               |
+|------|---------------|---------------------------|
+| GET  | /api/test     | Fetch full blockchain     |
+| POST | /api/add      | Perform a transaction     |
+| GET  | /users        | Fetch wallet balances     |
+| POST | /users/create | Create a new wallet       |
 
-⚠️ Limitations
-Single-node blockchain (no distributed consensus)
+---
 
-No cryptographic wallet signatures
+## 🔐 Security & Integrity
 
-No authentication or authorization layer
+- Pre-transaction validation before block creation  
+- Hash chaining prevents data tampering  
+- Blockchain integrity verified dynamically  
+- Invalid transactions are rejected  
 
-Educational implementation (not production banking)
+---
 
-🔮 Future Enhancements
-Distributed blockchain nodes
+## ⚠️ Limitations
 
-Digital signatures and key-based wallets
+- Single-node blockchain (no distributed consensus)  
+- No cryptographic signatures  
+- No authentication or authorization  
+- Educational prototype only  
 
-Authentication and role-based access
+---
 
-Smart contract support
+## 🔮 Future Enhancements
 
-Advanced blockchain explorer (search & filters)
+- Distributed blockchain nodes  
+- Digital signatures and wallets  
+- Authentication & RBAC  
+- Smart contracts  
+- Advanced explorer & analytics  
 
-Transaction analytics and reports
+---
 
-📸 Project Screenshots
+## 📸 Project Screenshots
 
- Full Dashboard Overview
+### Full Dashboard Overview
 ![Dashboard](screenshots/Main%20TrustWire%20Dashboard.png)
 
- Wallets (Before Transaction)
+### Wallets (Before Transaction)
 ![Wallet Before](screenshots/wallet-before-transaction.png)
 
- Wallets (After Transaction)
+### Wallets (After Transaction)
 ![Wallet After](screenshots/wallet-after-transaction.png)
 
- Transaction Demonstration
+### Transaction Demonstration
 ![Transaction Demo](screenshots/Transaction%20Demonstration.png)
 
- Transaction Success Notification
+### Transaction Success Notification
 ![Transaction Success](screenshots/transaction-success-toast.png)
 
- Blockchain Explorer
+### Blockchain Explorer
 ![Blockchain Explorer](screenshots/Blockchain%20Explorer%20–%20Full%20View.png)
 
- Backend API – Blockchain Data
+### Backend API – Blockchain Data
 ![API Test](screenshots/backend-api-test.png)
 
- Backend Server Running
+### Backend Server Running
 ![Server Running](screenshots/backend-server-running.png)
