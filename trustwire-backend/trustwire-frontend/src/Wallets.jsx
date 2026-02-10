@@ -4,7 +4,7 @@ import axios from "axios";
 /*
   API base URL
   - Uses Render backend in production
-  - Uses localhost during development
+  - Falls back to localhost for development
 */
 const API =
   import.meta.env.VITE_API_URL || "http://localhost:5001";
@@ -18,8 +18,15 @@ export default function Wallets() {
   const [message, setMessage] = useState(null);
 
   const fetchWallets = async () => {
-    const res = await axios.get(`${API}/users`);
-    setWallets(res.data);
+    try {
+      const res = await axios.get(`${API}/users`);
+      setWallets(res.data);
+    } catch (err) {
+      setMessage({
+        type: "error",
+        text: "Failed to fetch wallets",
+      });
+    }
   };
 
   useEffect(() => {
@@ -27,7 +34,7 @@ export default function Wallets() {
   }, []);
 
   const handleSend = async () => {
-    if (!from || !to || !amount || from === to) return;
+    if (!from || !to || !amount || from === to || amount <= 0) return;
 
     try {
       setLoading(true);
@@ -59,7 +66,7 @@ export default function Wallets() {
 
   return (
     <div style={styles.page}>
-      <h1 style={styles.title}>Blockchain Finance Dashboard</h1>
+      <h1 style={styles.title}>TrustWire – Blockchain Finance Dashboard</h1>
 
       {message && (
         <div
@@ -89,7 +96,7 @@ export default function Wallets() {
           </div>
         </div>
 
-        {/* Send money */}
+        {/* Send Money */}
         <div style={styles.card}>
           <h2 style={styles.sectionTitle}>Send Money</h2>
 
