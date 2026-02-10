@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:5001";
+/*
+  API base URL
+  - Uses Render backend in production
+  - Uses localhost during development
+*/
+const API =
+  import.meta.env.VITE_API_URL || "http://localhost:5001";
 
 export default function Wallets() {
   const [wallets, setWallets] = useState([]);
@@ -168,7 +174,6 @@ const styles = {
     padding: "30px",
     backdropFilter: "blur(12px)",
     boxShadow: "0 30px 60px rgba(0,0,0,0.6)",
-    transition: "transform 0.3s ease, box-shadow 0.3s ease",
   },
 
   sectionTitle: {
@@ -187,7 +192,6 @@ const styles = {
     padding: "20px",
     borderRadius: "14px",
     minWidth: "150px",
-    transition: "transform 0.25s ease",
   },
 
   walletName: {
@@ -225,7 +229,6 @@ const styles = {
     color: "#020617",
     background:
       "linear-gradient(135deg, #38bdf8, #22c55e)",
-    transition: "all 0.3s ease",
   },
 
   toast: {
