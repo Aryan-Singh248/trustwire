@@ -1,6 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 
+/*
+  API base URL
+  - Uses Render backend in production
+  - Falls back to localhost for development
+*/
+const API =
+  import.meta.env.VITE_API_URL || "http://localhost:5001";
+
 function BlockchainExplorer() {
   const [chainData, setChainData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -9,10 +17,11 @@ function BlockchainExplorer() {
 
   const fetchBlockchain = async () => {
     try {
-      const res = await axios.get("http://localhost:5001/api/test");
+      const res = await axios.get(`${API}/api/test`);
       setChainData(res.data);
       lastBlockCount.current = res.data.chainLength;
-    } catch {
+      setError(null);
+    } catch (err) {
       setError("Failed to load blockchain data");
     } finally {
       setLoading(false);
