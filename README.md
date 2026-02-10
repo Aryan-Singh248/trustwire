@@ -1,13 +1,30 @@
 # TrustWire  
-## Blockchain-Based Digital Banking System
+### Blockchain-Based Digital Banking System
+
+![Render](https://img.shields.io/badge/Deployed%20on-Render-46E3B7?logo=render&logoColor=white)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB%20Atlas-47A248?logo=mongodb&logoColor=white)
+![React](https://img.shields.io/badge/Frontend-React%20(Vite)-61DAFB?logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?logo=node.js&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Live-success)
+![License](https://img.shields.io/badge/License-MIT-blue)
+
+---
+
+## 📌 Live Demo
+- **Frontend:** https://trustwire-frontend.onrender.com  
+- **Backend API:** https://trustwire.onrender.com/api/test  
+
+---
+
+## 📖 Overview
 
 TrustWire is a full-stack blockchain-based digital banking system that enables
 secure wallet management, validated peer-to-peer transactions, and transparent
-transaction tracking using a custom blockchain ledger.
+transaction tracking using a custom-built blockchain ledger.
 
 The system combines traditional banking logic with blockchain principles such as
-immutability, hash chaining, and transaction transparency, all presented through
-a modern web-based dashboard.
+immutability, hash chaining, and transaction transparency, delivered through a
+modern fintech-style web dashboard.
 
 ---
 
@@ -19,7 +36,7 @@ a modern web-based dashboard.
 - Immutable transaction ledger  
 - Persistent blockchain storage using MongoDB  
 - Real-time blockchain explorer  
-- Modern, fintech-style user interface  
+- Modern dark-themed UI  
 
 ---
 
@@ -28,14 +45,13 @@ a modern web-based dashboard.
 ### Backend
 - Node.js  
 - Express.js  
-- MongoDB (MongoDB Atlas)  
+- MongoDB Atlas  
 - Custom Blockchain Engine  
-- SHA-based hashing  
 
 ### Frontend
 - React (Vite)  
 - Axios  
-- Modern CSS (dark UI with gradients)  
+- Modern CSS (gradients & glassmorphism)  
 
 ---
 
@@ -43,13 +59,9 @@ a modern web-based dashboard.
 
 Frontend (React UI)  
 ↓  
-Backend (Node.js + Express)  
+Backend (Node.js + Express REST APIs)  
 ↓  
-Database (MongoDB)
-
-- REST-based communication between frontend and backend  
-- Backend enforces transaction validation and blockchain logic  
-- MongoDB persists wallets and blockchain blocks  
+Database (MongoDB Atlas)
 
 ---
 
@@ -57,9 +69,9 @@ Database (MongoDB)
 
 1. User initiates a transaction from the frontend  
 2. Backend validates sender, receiver, and balance  
-3. Wallet balances are updated  
+3. Wallet balances are updated atomically  
 4. A new block is created and linked to the blockchain  
-5. Blockchain is persisted to the database  
+5. Blockchain is persisted to MongoDB  
 6. UI updates in real time  
 7. Blockchain Explorer reflects the new block  
 
@@ -88,9 +100,7 @@ TrustWire/
 
 ## 🚀 Deployment (Render)
 
-TrustWire is fully deployed on **Render**.
-
-### Backend Deployment (Web Service)
+### Backend (Web Service)
 
 - Runtime: Node.js  
 - Root Directory: `trustwire-backend`  
@@ -104,8 +114,8 @@ node src/server.js
 ```
 
 **Environment Variables**
-- `PORT=10000`
-- `MONGO_URI=<MongoDB Atlas Connection String>`
+- `PORT=10000`  
+- `MONGO_URI=<MongoDB Atlas URI>`  
 
 **Backend URL**
 ```
@@ -114,7 +124,7 @@ https://trustwire.onrender.com
 
 ---
 
-### Frontend Deployment (Static Site)
+### Frontend (Static Site)
 
 - Root Directory: `trustwire-frontend`  
 - Build Command:
@@ -141,7 +151,7 @@ cd trustwire-backend
 npm install
 npm run dev
 ```
-Runs on: http://localhost:5001
+Runs on: http://localhost:5001  
 
 ### Frontend
 ```bash
@@ -149,7 +159,7 @@ cd trustwire-frontend
 npm install
 npm run dev
 ```
-Runs on: http://localhost:5173
+Runs on: http://localhost:5173  
 
 ---
 
@@ -167,7 +177,7 @@ Runs on: http://localhost:5173
 ## 🔐 Security & Integrity
 
 - Pre-transaction validation before block creation  
-- Hash chaining prevents data tampering  
+- Hash chaining ensures immutability  
 - Blockchain integrity verified dynamically  
 - Invalid or insufficient transactions are rejected  
 
@@ -178,42 +188,39 @@ Runs on: http://localhost:5173
 - Single-node blockchain (no distributed consensus)  
 - No cryptographic signatures  
 - No authentication or authorization  
-- Educational prototype only  
+- Educational prototype (not production banking)  
 
 ---
 
 ## 🔮 Future Enhancements
 
 - Distributed blockchain nodes  
-- Digital signatures and wallets  
-- Authentication & RBAC  
+- Digital signatures and key-based wallets  
+- Authentication and RBAC  
 - Smart contracts  
-- Advanced explorer & analytics  
+- Advanced blockchain analytics  
 
 ---
 
-## 📸 Project Screenshots
+## 📸 Screenshots
 
-### Full Dashboard Overview
+### Full Dashboard
 ![Dashboard](screenshots/Main%20TrustWire%20Dashboard.png)
 
-### Wallets (Before Transaction)
+### Wallets Before Transaction
 ![Wallet Before](screenshots/wallet-before-transaction.png)
 
-### Wallets (After Transaction)
+### Wallets After Transaction
 ![Wallet After](screenshots/wallet-after-transaction.png)
 
-### Transaction Success Notification
+### Transaction Success
 ![Transaction Success](screenshots/transaction-success-toast.png)
 
 ### Blockchain Explorer
 ![Blockchain Explorer](screenshots/Blockchain%20Explorer%20%E2%80%93%20Full%20View.png)
 
-### Backend API – Blockchain Data
+### Backend API Test
 ![API Test](screenshots/backend-api-test.png)
-
-### Backend Server Running
-![Server Running](screenshots/backend-server-running.png)
 
 ---
 
@@ -224,3 +231,9 @@ Runs on: http://localhost:5173
 
 ### Transaction Sequence Diagram
 ![Transaction Sequence](screenshots/transaction-sequence-diagram.png)
+
+---
+
+## ✅ Project Status
+
+**Fully deployed, functional, and production-ready on Render.**
