@@ -86,7 +86,7 @@ TrustWire/
 
 ---
 
-## ▶️ How to Run the Project (Out of the Box)
+## ▶️ How to Run the Project 
 
 ### Backend
 
@@ -160,8 +160,7 @@ Runs on http://localhost:5173
 ### Wallets (After Transaction)
 ![Wallet After](screenshots/wallet-after-transaction.png)
 
-### Transaction Demonstration
-![Transaction Demo](screenshots/Transaction%20Demonstration.png)
+
 
 ### Transaction Success Notification
 ![Transaction Success](screenshots/transaction-success-toast.png)
